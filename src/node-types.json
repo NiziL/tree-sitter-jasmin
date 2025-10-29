@@ -1125,16 +1125,6 @@
           }
         ]
       },
-      "annotations": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "annotations",
-            "named": true
-          }
-        ]
-      },
       "args": {
         "multiple": true,
         "required": true,
@@ -1188,117 +1178,11 @@
         ]
       },
       "return_type": {
-        "multiple": true,
+        "multiple": false,
         "required": false,
         "types": [
           {
-            "type": "(",
-            "named": false
-          },
-          {
-            "type": ")",
-            "named": false
-          },
-          {
-            "type": ",",
-            "named": false
-          },
-          {
-            "type": "->",
-            "named": false
-          },
-          {
-            "type": "annotations",
-            "named": true
-          },
-          {
-            "type": "array_type",
-            "named": true
-          },
-          {
-            "type": "bool_type",
-            "named": true
-          },
-          {
-            "type": "int_type",
-            "named": true
-          },
-          {
-            "type": "storage",
-            "named": true
-          },
-          {
-            "type": "type_alias",
-            "named": true
-          },
-          {
-            "type": "utype",
-            "named": true
-          }
-        ]
-      },
-      "storage": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "storage",
-            "named": true
-          }
-        ]
-      },
-      "storage_type": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "array_type",
-            "named": true
-          },
-          {
-            "type": "bool_type",
-            "named": true
-          },
-          {
-            "type": "int_type",
-            "named": true
-          },
-          {
-            "type": "storage",
-            "named": true
-          },
-          {
-            "type": "type_alias",
-            "named": true
-          },
-          {
-            "type": "utype",
-            "named": true
-          }
-        ]
-      },
-      "type": {
-        "multiple": true,
-        "required": false,
-        "types": [
-          {
-            "type": "array_type",
-            "named": true
-          },
-          {
-            "type": "bool_type",
-            "named": true
-          },
-          {
-            "type": "int_type",
-            "named": true
-          },
-          {
-            "type": "type_alias",
-            "named": true
-          },
-          {
-            "type": "utype",
+            "type": "return_type",
             "named": true
           }
         ]
@@ -2640,6 +2524,88 @@
           "named": true
         }
       ]
+    }
+  },
+  {
+    "type": "return_type",
+    "named": true,
+    "fields": {
+      "annotations": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "annotations",
+            "named": true
+          }
+        ]
+      },
+      "storage": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "storage",
+            "named": true
+          }
+        ]
+      },
+      "storage_type": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "array_type",
+            "named": true
+          },
+          {
+            "type": "bool_type",
+            "named": true
+          },
+          {
+            "type": "int_type",
+            "named": true
+          },
+          {
+            "type": "storage",
+            "named": true
+          },
+          {
+            "type": "type_alias",
+            "named": true
+          },
+          {
+            "type": "utype",
+            "named": true
+          }
+        ]
+      },
+      "type": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "array_type",
+            "named": true
+          },
+          {
+            "type": "bool_type",
+            "named": true
+          },
+          {
+            "type": "int_type",
+            "named": true
+          },
+          {
+            "type": "type_alias",
+            "named": true
+          },
+          {
+            "type": "utype",
+            "named": true
+          }
+        ]
+      }
     }
   },
   {
