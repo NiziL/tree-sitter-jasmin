@@ -3184,7 +3184,7 @@
             "members": [
               {
                 "type": "SYMBOL",
-                "name": "return_type"
+                "name": "return_decl"
               },
               {
                 "type": "BLANK"
@@ -3215,7 +3215,7 @@
         }
       ]
     },
-    "return_type": {
+    "return_decl": {
       "type": "SEQ",
       "members": [
         {

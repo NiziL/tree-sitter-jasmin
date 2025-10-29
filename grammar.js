@@ -499,13 +499,13 @@ module.exports = grammar({
         $._fun_def_start,
         field("name", $.identifier),
         field("args", parens_tuple($.param_decl)),
-        field("return_type", optional($.return_type)),
+        field("return_type", optional($.return_decl)),
         field("body", $.function_body),
       ),
 
     call_conv: (_) => choice("export", "inline"),
 
-    return_type: ($) => seq("->", tuple($._annot_stor_type)),
+    return_decl: ($) => seq("->", tuple($._annot_stor_type)),
 
     return_statement: ($) =>
       seq("return", tuple(alias($.identifier, $.variable)), ";"),
