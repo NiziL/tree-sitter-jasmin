@@ -511,7 +511,7 @@ module.exports = grammar({
       seq("return", tuple(alias($.identifier, $.variable)), ";"),
 
     function_body: ($) =>
-      choice(braces(seq(repeat($._instr), optional($.return_statement)))),
+      braces(seq(repeat($._instr), optional($.return_statement))),
 
     param_decl: ($) =>
       seq(
