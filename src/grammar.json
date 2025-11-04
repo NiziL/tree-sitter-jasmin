@@ -2754,8 +2754,13 @@
           "type": "FIELD",
           "name": "start",
           "content": {
-            "type": "SYMBOL",
-            "name": "_expr"
+            "type": "ALIAS",
+            "content": {
+              "type": "SYMBOL",
+              "name": "_expr"
+            },
+            "named": true,
+            "value": "start_expr"
           }
         },
         {
@@ -2775,8 +2780,13 @@
           "type": "FIELD",
           "name": "end",
           "content": {
-            "type": "SYMBOL",
-            "name": "_expr"
+            "type": "ALIAS",
+            "content": {
+              "type": "SYMBOL",
+              "name": "_expr"
+            },
+            "named": true,
+            "value": "end_expr"
           }
         },
         {

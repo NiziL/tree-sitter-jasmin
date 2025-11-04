@@ -446,9 +446,9 @@ module.exports = grammar({
         "for",
         field("loop_var", alias($.identifier, $.variable)),
         "=",
-        field("start", $._expr),
+        field("start", alias($._expr, $.start_expr)),
         choice("to", "downto"),
-        field("end", $._expr),
+        field("end", alias($._expr, $.end_expr)),
         field("body", $.block),
       ),
 
