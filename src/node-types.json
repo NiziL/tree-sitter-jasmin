@@ -918,6 +918,49 @@
     }
   },
   {
+    "type": "else_block",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "annotations",
+          "named": true
+        },
+        {
+          "type": "array_init",
+          "named": true
+        },
+        {
+          "type": "assign",
+          "named": true
+        },
+        {
+          "type": "call_instr",
+          "named": true
+        },
+        {
+          "type": "for_loop",
+          "named": true
+        },
+        {
+          "type": "if_statement",
+          "named": true
+        },
+        {
+          "type": "var_decl",
+          "named": true
+        },
+        {
+          "type": "while_loop",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "end_expr",
     "named": true,
     "fields": {},
@@ -1317,6 +1360,49 @@
     }
   },
   {
+    "type": "if_block",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "annotations",
+          "named": true
+        },
+        {
+          "type": "array_init",
+          "named": true
+        },
+        {
+          "type": "assign",
+          "named": true
+        },
+        {
+          "type": "call_instr",
+          "named": true
+        },
+        {
+          "type": "for_loop",
+          "named": true
+        },
+        {
+          "type": "if_statement",
+          "named": true
+        },
+        {
+          "type": "var_decl",
+          "named": true
+        },
+        {
+          "type": "while_loop",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "if_statement",
     "named": true,
     "fields": {
@@ -1325,7 +1411,7 @@
         "required": false,
         "types": [
           {
-            "type": "block",
+            "type": "else_block",
             "named": true
           },
           {
@@ -1339,59 +1425,7 @@
         "required": true,
         "types": [
           {
-            "type": "bin_expr",
-            "named": true
-          },
-          {
-            "type": "call_expr",
-            "named": true
-          },
-          {
-            "type": "cast_expr",
-            "named": true
-          },
-          {
-            "type": "false",
-            "named": true
-          },
-          {
-            "type": "index_expr",
-            "named": true
-          },
-          {
-            "type": "int_literal",
-            "named": true
-          },
-          {
-            "type": "intrinsic_expr",
-            "named": true
-          },
-          {
-            "type": "mem_access",
-            "named": true
-          },
-          {
-            "type": "pack_expr",
-            "named": true
-          },
-          {
-            "type": "parens_expr",
-            "named": true
-          },
-          {
-            "type": "ternary_expr",
-            "named": true
-          },
-          {
-            "type": "true",
-            "named": true
-          },
-          {
-            "type": "unary_expr",
-            "named": true
-          },
-          {
-            "type": "variable",
+            "type": "cond_expr",
             "named": true
           }
         ]
@@ -1401,7 +1435,7 @@
         "required": true,
         "types": [
           {
-            "type": "block",
+            "type": "if_block",
             "named": true
           }
         ]

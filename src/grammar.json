@@ -2078,16 +2078,26 @@
               "type": "FIELD",
               "name": "condition",
               "content": {
-                "type": "SYMBOL",
-                "name": "_expr"
+                "type": "ALIAS",
+                "content": {
+                  "type": "SYMBOL",
+                  "name": "_expr"
+                },
+                "named": true,
+                "value": "cond_expr"
               }
             },
             {
               "type": "FIELD",
               "name": "consequence",
               "content": {
-                "type": "SYMBOL",
-                "name": "block"
+                "type": "ALIAS",
+                "content": {
+                  "type": "SYMBOL",
+                  "name": "block"
+                },
+                "named": true,
+                "value": "if_block"
               }
             },
             {
@@ -2111,8 +2121,13 @@
                             "name": "if_statement"
                           },
                           {
-                            "type": "SYMBOL",
-                            "name": "block"
+                            "type": "ALIAS",
+                            "content": {
+                              "type": "SYMBOL",
+                              "name": "block"
+                            },
+                            "named": true,
+                            "value": "else_block"
                           }
                         ]
                       }
