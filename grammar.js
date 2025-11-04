@@ -455,11 +455,11 @@ module.exports = grammar({
     while_loop: ($) =>
       seq(
         "while",
-        field("pre_block", optional($.block)),
+        field("pre_block", optional(alias($.block, $.pre_block))),
         "(",
-        field("condition", $._expr),
+        field("condition", alias($._expr, $.cond_expr)),
         ")",
-        field("post_block", optional($.block)),
+        field("post_block", optional(alias($.block, $.post_block))),
       ),
 
     _decl_instr: ($) => seq($.var_decl, ";"),

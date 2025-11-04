@@ -2838,8 +2838,13 @@
             "type": "CHOICE",
             "members": [
               {
-                "type": "SYMBOL",
-                "name": "block"
+                "type": "ALIAS",
+                "content": {
+                  "type": "SYMBOL",
+                  "name": "block"
+                },
+                "named": true,
+                "value": "pre_block"
               },
               {
                 "type": "BLANK"
@@ -2855,8 +2860,13 @@
           "type": "FIELD",
           "name": "condition",
           "content": {
-            "type": "SYMBOL",
-            "name": "_expr"
+            "type": "ALIAS",
+            "content": {
+              "type": "SYMBOL",
+              "name": "_expr"
+            },
+            "named": true,
+            "value": "cond_expr"
           }
         },
         {
@@ -2870,8 +2880,13 @@
             "type": "CHOICE",
             "members": [
               {
-                "type": "SYMBOL",
-                "name": "block"
+                "type": "ALIAS",
+                "content": {
+                  "type": "SYMBOL",
+                  "name": "block"
+                },
+                "named": true,
+                "value": "post_block"
               },
               {
                 "type": "BLANK"

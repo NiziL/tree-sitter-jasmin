@@ -10,7 +10,7 @@
 #define STATE_COUNT 454
 #define LARGE_STATE_COUNT 2
 #define SYMBOL_COUNT 175
-#define ALIAS_COUNT 10
+#define ALIAS_COUNT 12
 #define TOKEN_COUNT 89
 #define EXTERNAL_TOKEN_COUNT 0
 #define FIELD_COUNT 49
@@ -200,10 +200,12 @@ enum ts_symbol_identifiers {
   alias_sym_end_expr = 178,
   alias_sym_expr = 179,
   alias_sym_parameter = 180,
-  alias_sym_start_expr = 181,
-  alias_sym_type_alias = 182,
-  alias_sym_value_expr = 183,
-  alias_sym_variable = 184,
+  alias_sym_post_block = 181,
+  alias_sym_pre_block = 182,
+  alias_sym_start_expr = 183,
+  alias_sym_type_alias = 184,
+  alias_sym_value_expr = 185,
+  alias_sym_variable = 186,
 };
 
 static const char * const ts_symbol_names[] = {
@@ -388,6 +390,8 @@ static const char * const ts_symbol_names[] = {
   [alias_sym_end_expr] = "end_expr",
   [alias_sym_expr] = "expr",
   [alias_sym_parameter] = "parameter",
+  [alias_sym_post_block] = "post_block",
+  [alias_sym_pre_block] = "pre_block",
   [alias_sym_start_expr] = "start_expr",
   [alias_sym_type_alias] = "type_alias",
   [alias_sym_value_expr] = "value_expr",
@@ -576,6 +580,8 @@ static const TSSymbol ts_symbol_map[] = {
   [alias_sym_end_expr] = alias_sym_end_expr,
   [alias_sym_expr] = alias_sym_expr,
   [alias_sym_parameter] = alias_sym_parameter,
+  [alias_sym_post_block] = alias_sym_post_block,
+  [alias_sym_pre_block] = alias_sym_pre_block,
   [alias_sym_start_expr] = alias_sym_start_expr,
   [alias_sym_type_alias] = alias_sym_type_alias,
   [alias_sym_value_expr] = alias_sym_value_expr,
@@ -1307,6 +1313,14 @@ static const TSSymbolMetadata ts_symbol_metadata[] = {
     .visible = true,
     .named = true,
   },
+  [alias_sym_post_block] = {
+    .visible = true,
+    .named = true,
+  },
+  [alias_sym_pre_block] = {
+    .visible = true,
+    .named = true,
+  },
   [alias_sym_start_expr] = {
     .visible = true,
     .named = true,
@@ -1959,6 +1973,9 @@ static const TSSymbol ts_alias_sequences[PRODUCTION_ID_COUNT][MAX_ALIAS_SEQUENCE
   [66] = {
     [1] = alias_sym_variable,
   },
+  [73] = {
+    [2] = alias_sym_cond_expr,
+  },
   [75] = {
     [2] = alias_sym_assign_expr,
   },
@@ -1968,8 +1985,21 @@ static const TSSymbol ts_alias_sequences[PRODUCTION_ID_COUNT][MAX_ALIAS_SEQUENCE
   [81] = {
     [2] = alias_sym_variable,
   },
+  [82] = {
+    [2] = alias_sym_cond_expr,
+    [4] = alias_sym_post_block,
+  },
+  [83] = {
+    [1] = alias_sym_pre_block,
+    [3] = alias_sym_cond_expr,
+  },
   [84] = {
     [2] = alias_sym_variable,
+  },
+  [85] = {
+    [1] = alias_sym_pre_block,
+    [3] = alias_sym_cond_expr,
+    [5] = alias_sym_post_block,
   },
   [87] = {
     [2] = alias_sym_assign_expr,
@@ -1992,6 +2022,10 @@ static const uint16_t ts_non_terminal_alias_map[] = {
     alias_sym_expr,
     alias_sym_start_expr,
     alias_sym_value_expr,
+  sym_block, 3,
+    sym_block,
+    alias_sym_post_block,
+    alias_sym_pre_block,
   0,
 };
 
