@@ -299,8 +299,13 @@
           "type": "FIELD",
           "name": "value",
           "content": {
-            "type": "SYMBOL",
-            "name": "_gepxr"
+            "type": "ALIAS",
+            "content": {
+              "type": "SYMBOL",
+              "name": "_gepxr"
+            },
+            "named": true,
+            "value": "value_gexpr"
           }
         },
         {
@@ -313,8 +318,13 @@
       "type": "CHOICE",
       "members": [
         {
-          "type": "SYMBOL",
-          "name": "_expr"
+          "type": "ALIAS",
+          "content": {
+            "type": "SYMBOL",
+            "name": "_expr"
+          },
+          "named": true,
+          "value": "expr"
         },
         {
           "type": "SEQ",
@@ -396,8 +406,13 @@
           "type": "FIELD",
           "name": "value",
           "content": {
-            "type": "SYMBOL",
-            "name": "_expr"
+            "type": "ALIAS",
+            "content": {
+              "type": "SYMBOL",
+              "name": "_expr"
+            },
+            "named": true,
+            "value": "value_expr"
           }
         },
         {
@@ -2559,8 +2574,13 @@
             "type": "FIELD",
             "name": "right",
             "content": {
-              "type": "SYMBOL",
-              "name": "_expr"
+              "type": "ALIAS",
+              "content": {
+                "type": "SYMBOL",
+                "name": "_expr"
+              },
+              "named": true,
+              "value": "assign_expr"
             }
           },
           {
@@ -2577,8 +2597,13 @@
                       "value": "if"
                     },
                     {
-                      "type": "SYMBOL",
-                      "name": "_expr"
+                      "type": "ALIAS",
+                      "content": {
+                        "type": "SYMBOL",
+                        "name": "_expr"
+                      },
+                      "named": true,
+                      "value": "cond_expr"
                     }
                   ]
                 },
@@ -3545,8 +3570,13 @@
                             "type": "FIELD",
                             "name": "default_value",
                             "content": {
-                              "type": "SYMBOL",
-                              "name": "_expr"
+                              "type": "ALIAS",
+                              "content": {
+                                "type": "SYMBOL",
+                                "name": "_expr"
+                              },
+                              "named": true,
+                              "value": "value_expr"
                             }
                           }
                         ]
@@ -4157,8 +4187,13 @@
               "type": "FIELD",
               "name": "len",
               "content": {
-                "type": "SYMBOL",
-                "name": "_expr"
+                "type": "ALIAS",
+                "content": {
+                  "type": "SYMBOL",
+                  "name": "_expr"
+                },
+                "named": true,
+                "value": "array_length"
               }
             },
             {

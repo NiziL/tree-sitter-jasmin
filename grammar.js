@@ -157,12 +157,12 @@ module.exports = grammar({
         field("type", $._type),
         field("name", alias($.identifier, $.variable)),
         "=",
-        field("value", $._gepxr),
+        field("value", alias($._gepxr, $.value_gexpr)),
         ";",
       ),
 
     _gepxr: ($) =>
-      choice($._expr, seq("{", rtuple1($._expr), "}"), $.string_literal),
+      choice(alias($._expr, $.expr), seq("{", rtuple1($._expr), "}"), $.string_literal),
     // ------
 
     // param ------
@@ -172,7 +172,7 @@ module.exports = grammar({
         field("type", $._type),
         field("name", alias($.identifier, $.variable)),
         "=",
-        field("value", $._expr),
+        field("value", alias($._expr, $.value_expr)),
         ";",
       ),
     // ------
@@ -420,8 +420,8 @@ module.exports = grammar({
         seq(
           field("left", $.lvalues),
           field("operator", alias($.assign_op, $.operator)),
-          field("right", $._expr),
-          field("condition", optional(seq("if", $._expr))),
+          field("right", alias($._expr, $.assign_expr)),
+          field("condition", optional(seq("if", alias($._expr, $.cond_expr)))),
           ";",
         ),
       ),
@@ -528,7 +528,7 @@ module.exports = grammar({
                   seq(
                     field("var", alias($.identifier, $.parameter)),
                     "=",
-                    field("default_value", $._expr),
+                    field("default_value", alias($._expr, $.value_expr)),
                   ),
                 ),
               ),
@@ -613,7 +613,7 @@ module.exports = grammar({
     array_type: ($) =>
       seq(
         field("type", choice($.utype, $.identifier)),
-        brackets(field("len", $._expr)),
+        brackets(field("len", alias($._expr, $.array_length))),
       ),
 
     bool_type: (_) => "bool",
