@@ -436,8 +436,8 @@ module.exports = grammar({
     call_instr: ($) =>
       seq(
         field("function", $.identifier),
-        field("args", parens_tuple($._expr)),
-        field("condition", optional(seq("if", $._expr))),
+        field("args", parens_tuple(alias($._expr, $.arg_expr))),
+        field("condition", optional(seq("if", alias($._expr, $.cond_expr)))),
         ";",
       ),
 
