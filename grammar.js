@@ -312,7 +312,7 @@ module.exports = grammar({
         PREC.call,
         seq(
           field("function", $.identifier),
-          field("args", parens_tuple($._expr)),
+          field("args", parens_tuple(alias($._expr, $.arg_expr))),
         ),
       ),
 
