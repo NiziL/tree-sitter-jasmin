@@ -3158,67 +3158,11 @@
       "required": true,
       "types": [
         {
-          "type": "bin_expr",
-          "named": true
-        },
-        {
-          "type": "call_expr",
-          "named": true
-        },
-        {
-          "type": "cast_expr",
-          "named": true
-        },
-        {
           "type": "expr",
           "named": true
         },
         {
-          "type": "false",
-          "named": true
-        },
-        {
-          "type": "index_expr",
-          "named": true
-        },
-        {
-          "type": "int_literal",
-          "named": true
-        },
-        {
-          "type": "intrinsic_expr",
-          "named": true
-        },
-        {
-          "type": "mem_access",
-          "named": true
-        },
-        {
-          "type": "pack_expr",
-          "named": true
-        },
-        {
-          "type": "parens_expr",
-          "named": true
-        },
-        {
           "type": "string_literal",
-          "named": true
-        },
-        {
-          "type": "ternary_expr",
-          "named": true
-        },
-        {
-          "type": "true",
-          "named": true
-        },
-        {
-          "type": "unary_expr",
-          "named": true
-        },
-        {
-          "type": "variable",
           "named": true
         }
       ]

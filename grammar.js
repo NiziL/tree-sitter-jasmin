@@ -162,7 +162,7 @@ module.exports = grammar({
       ),
 
     _gepxr: ($) =>
-      choice(alias($._expr, $.expr), seq("{", rtuple1($._expr), "}"), $.string_literal),
+      choice(alias($._expr, $.expr), seq("{", rtuple1(alias($._expr, $.expr)), "}"), $.string_literal),
     // ------
 
     // param ------
