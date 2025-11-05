@@ -547,7 +547,7 @@ module.exports = grammar({
         seq(
           field("v", alias($.identifier, $.variable)),
           "=",
-          field("e", $._expr),
+          field("e", alias($._expr, $.init_expr)),
         ),
       ),
 
