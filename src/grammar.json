@@ -764,8 +764,13 @@
             "name": "_peop1"
           },
           {
-            "type": "SYMBOL",
-            "name": "_expr"
+            "type": "ALIAS",
+            "content": {
+              "type": "SYMBOL",
+              "name": "_expr"
+            },
+            "named": true,
+            "value": "expr"
           }
         ]
       }
@@ -1484,8 +1489,13 @@
                 "type": "FIELD",
                 "name": "left",
                 "content": {
-                  "type": "SYMBOL",
-                  "name": "_expr"
+                  "type": "ALIAS",
+                  "content": {
+                    "type": "SYMBOL",
+                    "name": "_expr"
+                  },
+                  "named": true,
+                  "value": "left_expr"
                 }
               },
               {
@@ -1505,8 +1515,13 @@
                 "type": "FIELD",
                 "name": "right",
                 "content": {
-                  "type": "SYMBOL",
-                  "name": "_expr"
+                  "type": "ALIAS",
+                  "content": {
+                    "type": "SYMBOL",
+                    "name": "_expr"
+                  },
+                  "named": true,
+                  "value": "right_expr"
                 }
               }
             ]
@@ -1522,8 +1537,13 @@
                 "type": "FIELD",
                 "name": "left",
                 "content": {
-                  "type": "SYMBOL",
-                  "name": "_expr"
+                  "type": "ALIAS",
+                  "content": {
+                    "type": "SYMBOL",
+                    "name": "_expr"
+                  },
+                  "named": true,
+                  "value": "left_expr"
                 }
               },
               {
@@ -1543,8 +1563,13 @@
                 "type": "FIELD",
                 "name": "right",
                 "content": {
-                  "type": "SYMBOL",
-                  "name": "_expr"
+                  "type": "ALIAS",
+                  "content": {
+                    "type": "SYMBOL",
+                    "name": "_expr"
+                  },
+                  "named": true,
+                  "value": "right_expr"
                 }
               }
             ]
@@ -1560,8 +1585,13 @@
                 "type": "FIELD",
                 "name": "left",
                 "content": {
-                  "type": "SYMBOL",
-                  "name": "_expr"
+                  "type": "ALIAS",
+                  "content": {
+                    "type": "SYMBOL",
+                    "name": "_expr"
+                  },
+                  "named": true,
+                  "value": "left_expr"
                 }
               },
               {
@@ -1581,8 +1611,13 @@
                 "type": "FIELD",
                 "name": "right",
                 "content": {
-                  "type": "SYMBOL",
-                  "name": "_expr"
+                  "type": "ALIAS",
+                  "content": {
+                    "type": "SYMBOL",
+                    "name": "_expr"
+                  },
+                  "named": true,
+                  "value": "right_expr"
                 }
               }
             ]
@@ -1598,8 +1633,13 @@
                 "type": "FIELD",
                 "name": "left",
                 "content": {
-                  "type": "SYMBOL",
-                  "name": "_expr"
+                  "type": "ALIAS",
+                  "content": {
+                    "type": "SYMBOL",
+                    "name": "_expr"
+                  },
+                  "named": true,
+                  "value": "left_expr"
                 }
               },
               {
@@ -1619,8 +1659,13 @@
                 "type": "FIELD",
                 "name": "right",
                 "content": {
-                  "type": "SYMBOL",
-                  "name": "_expr"
+                  "type": "ALIAS",
+                  "content": {
+                    "type": "SYMBOL",
+                    "name": "_expr"
+                  },
+                  "named": true,
+                  "value": "right_expr"
                 }
               }
             ]
@@ -1636,8 +1681,13 @@
                 "type": "FIELD",
                 "name": "left",
                 "content": {
-                  "type": "SYMBOL",
-                  "name": "_expr"
+                  "type": "ALIAS",
+                  "content": {
+                    "type": "SYMBOL",
+                    "name": "_expr"
+                  },
+                  "named": true,
+                  "value": "left_expr"
                 }
               },
               {
@@ -1657,8 +1707,13 @@
                 "type": "FIELD",
                 "name": "right",
                 "content": {
-                  "type": "SYMBOL",
-                  "name": "_expr"
+                  "type": "ALIAS",
+                  "content": {
+                    "type": "SYMBOL",
+                    "name": "_expr"
+                  },
+                  "named": true,
+                  "value": "right_expr"
                 }
               }
             ]

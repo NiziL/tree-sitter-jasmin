@@ -219,7 +219,7 @@ module.exports = grammar({
         choice(seq("!", optional($.castop)), seq("-", optional($.castop))),
       ),
 
-    unary_expr: ($) => prec.left(PREC.unary, seq($._peop1, $._expr)),
+    unary_expr: ($) => prec.left(PREC.unary, seq($._peop1, alias($._expr, $.expr))),
 
     cast_expr: ($) =>
       prec(
@@ -251,46 +251,46 @@ module.exports = grammar({
         prec.left(
           PREC.and,
           seq(
-            field("left", $._expr),
+            field("left", alias($._expr, $.left_expr)),
             // @ts-ignore
             field("operator", alias("&&", $.operator)),
-            field("right", $._expr),
+            field("right", alias($._expr, $.right_expr)),
           ),
         ),
         prec.left(
           PREC.or,
           seq(
-            field("left", $._expr),
+            field("left", alias($._expr, $.left_expr)),
             // @ts-ignore
             field("operator", alias("||", $.operator)),
-            field("right", $._expr),
+            field("right", alias($._expr, $.right_expr)),
           ),
         ),
         prec.left(
           PREC.multiplicative,
           seq(
-            field("left", $._expr),
+            field("left", alias($._expr, $.left_expr)),
             // @ts-ignore
             field("operator", alias($._mult_op, $.operator)),
-            field("right", $._expr),
+            field("right", alias($._expr, $.right_expr)),
           ),
         ),
         prec.left(
           PREC.additive,
           seq(
-            field("left", $._expr),
+            field("left", alias($._expr, $.left_expr)),
             // @ts-ignore
             field("operator", alias($._add_op, $.operator)),
-            field("right", $._expr),
+            field("right", alias($._expr, $.right_expr)),
           ),
         ),
         prec.left(
           PREC.comparative,
           seq(
-            field("left", $._expr),
+            field("left", alias($._expr, $.left_expr)),
             // @ts-ignore
             field("operator", alias($._comp_op, $.operator)),
-            field("right", $._expr),
+            field("right", alias($._expr, $.right_expr)),
           ),
         ),
       ),
