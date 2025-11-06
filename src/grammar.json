@@ -529,8 +529,13 @@
           "type": "FIELD",
           "name": "value",
           "content": {
-            "type": "SYMBOL",
-            "name": "_expr"
+            "type": "ALIAS",
+            "content": {
+              "type": "SYMBOL",
+              "name": "_expr"
+            },
+            "named": true,
+            "value": "index_expr"
           }
         },
         {
@@ -559,8 +564,13 @@
           "value": ":"
         },
         {
-          "type": "SYMBOL",
-          "name": "_expr"
+          "type": "ALIAS",
+          "content": {
+            "type": "SYMBOL",
+            "name": "_expr"
+          },
+          "named": true,
+          "value": "len_expr"
         }
       ]
     },

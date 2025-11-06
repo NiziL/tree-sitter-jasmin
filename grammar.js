@@ -192,11 +192,11 @@ module.exports = grammar({
       seq(
         field("alignment", optional($.alignment)),
         field("type", optional($.access_type)),
-        field("value", $._expr),
+        field("value", alias($._expr, $.index_expr)),
         field("len", optional($._arr_access_len)),
       ),
 
-    _arr_access_len: ($) => seq(":", $._expr),
+    _arr_access_len: ($) => seq(":", alias($._expr, $.len_expr)),
 
     _mem_acces_address: ($) =>
       seq(
