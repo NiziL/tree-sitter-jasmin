@@ -224,7 +224,7 @@ module.exports = grammar({
     cast_expr: ($) =>
       prec(
         PREC.unary,
-        seq(field("cast", parens($._cast)), field("expression", $._expr)),
+        seq(field("cast", parens($._cast)), field("expression", alias($._expr, $.expr))),
       ),
 
     _mult_op: ($) =>
@@ -343,7 +343,7 @@ module.exports = grammar({
       seq(
         field("ct", parens($.svsize)),
         "[",
-        field("es", rtuple1($._expr)),
+        field("es", rtuple1(alias($._expr, $.expr))),
         "]",
       ),
 
