@@ -299,11 +299,11 @@ module.exports = grammar({
       prec.right(
         PREC.conditional,
         seq(
-          field("condition", $._expr),
+          field("condition", alias($._expr, $.cond_expr)),
           "?",
-          field("consequence", $._expr),
+          field("consequence", alias($._expr, $.if_expr)),
           ":",
-          field("alternative", $._expr),
+          field("alternative", alias($._expr, $.else_expr)),
         ),
       ),
 
@@ -321,14 +321,14 @@ module.exports = grammar({
         PREC.call,
         seq(
           field("intrinsic", $.intrinsic),
-          field("args", parens_tuple($._expr)),
+          field("args", parens_tuple(alias($._expr, $.expr))),
         ),
       ),
 
     true: (_) => "true",
     false: (_) => "false",
 
-    parens_expr: ($) => parens($._expr),
+    parens_expr: ($) => parens(alias($._expr, $.expr)),
 
     index_expr: ($) =>
       prec(

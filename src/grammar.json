@@ -1731,8 +1731,13 @@
             "type": "FIELD",
             "name": "condition",
             "content": {
-              "type": "SYMBOL",
-              "name": "_expr"
+              "type": "ALIAS",
+              "content": {
+                "type": "SYMBOL",
+                "name": "_expr"
+              },
+              "named": true,
+              "value": "cond_expr"
             }
           },
           {
@@ -1743,8 +1748,13 @@
             "type": "FIELD",
             "name": "consequence",
             "content": {
-              "type": "SYMBOL",
-              "name": "_expr"
+              "type": "ALIAS",
+              "content": {
+                "type": "SYMBOL",
+                "name": "_expr"
+              },
+              "named": true,
+              "value": "if_expr"
             }
           },
           {
@@ -1755,8 +1765,13 @@
             "type": "FIELD",
             "name": "alternative",
             "content": {
-              "type": "SYMBOL",
-              "name": "_expr"
+              "type": "ALIAS",
+              "content": {
+                "type": "SYMBOL",
+                "name": "_expr"
+              },
+              "named": true,
+              "value": "else_expr"
             }
           }
         ]
@@ -1870,8 +1885,13 @@
                       "type": "SEQ",
                       "members": [
                         {
-                          "type": "SYMBOL",
-                          "name": "_expr"
+                          "type": "ALIAS",
+                          "content": {
+                            "type": "SYMBOL",
+                            "name": "_expr"
+                          },
+                          "named": true,
+                          "value": "expr"
                         },
                         {
                           "type": "REPEAT",
@@ -1883,8 +1903,13 @@
                                 "value": ","
                               },
                               {
-                                "type": "SYMBOL",
-                                "name": "_expr"
+                                "type": "ALIAS",
+                                "content": {
+                                  "type": "SYMBOL",
+                                  "name": "_expr"
+                                },
+                                "named": true,
+                                "value": "expr"
                               }
                             ]
                           }
@@ -1922,8 +1947,13 @@
           "value": "("
         },
         {
-          "type": "SYMBOL",
-          "name": "_expr"
+          "type": "ALIAS",
+          "content": {
+            "type": "SYMBOL",
+            "name": "_expr"
+          },
+          "named": true,
+          "value": "expr"
         },
         {
           "type": "STRING",
