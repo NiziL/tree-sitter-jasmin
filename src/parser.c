@@ -1981,6 +1981,9 @@ static const TSSymbol ts_alias_sequences[PRODUCTION_ID_COUNT][MAX_ALIAS_SEQUENCE
   [10] = {
     [1] = alias_sym_variable,
   },
+  [11] = {
+    [0] = alias_sym_expr,
+  },
   [12] = {
     [0] = alias_sym_variable,
   },
@@ -1992,6 +1995,12 @@ static const TSSymbol ts_alias_sequences[PRODUCTION_ID_COUNT][MAX_ALIAS_SEQUENCE
   },
   [17] = {
     [1] = alias_sym_variable,
+  },
+  [18] = {
+    [1] = alias_sym_expr,
+  },
+  [20] = {
+    [1] = alias_sym_expr,
   },
   [27] = {
     [0] = alias_sym_parameter,
@@ -2005,6 +2014,9 @@ static const TSSymbol ts_alias_sequences[PRODUCTION_ID_COUNT][MAX_ALIAS_SEQUENCE
   [34] = {
     [2] = alias_sym_variable,
     [4] = alias_sym_value_expr,
+  },
+  [36] = {
+    [2] = alias_sym_expr,
   },
   [37] = {
     [2] = alias_sym_arg_expr,

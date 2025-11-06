@@ -202,7 +202,7 @@ module.exports = grammar({
       seq(
         field("alignment", optional($.alignment)),
         field("type", optional($.access_type)),
-        field("expr", $._expr),
+        field("expr", alias($._expr, $.expr)),
       ),
 
     mem_access: ($) => prec(PREC.access, seq("[", $._mem_acces_address, "]")),

@@ -603,8 +603,13 @@
           "type": "FIELD",
           "name": "expr",
           "content": {
-            "type": "SYMBOL",
-            "name": "_expr"
+            "type": "ALIAS",
+            "content": {
+              "type": "SYMBOL",
+              "name": "_expr"
+            },
+            "named": true,
+            "value": "expr"
           }
         }
       ]
