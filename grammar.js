@@ -483,7 +483,7 @@ module.exports = grammar({
         seq($.implicites, ",", rtuple1($._lvalue)),
       ),
 
-    implicites: ($) => seq("?", braces(commaSep($._annotation))),
+    implicites: ($) => seq("?", braces(commaSep(alias($._annotation, $.annotation)))),
     // ------
 
     // function definitions ------

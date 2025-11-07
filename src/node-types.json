@@ -35,6 +35,37 @@
     "fields": {}
   },
   {
+    "type": "annotation",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "aint",
+          "named": true
+        },
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "keyword",
+          "named": true
+        },
+        {
+          "type": "string_literal",
+          "named": true
+        },
+        {
+          "type": "utype",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "annotations",
     "named": true,
     "fields": {},
@@ -1340,23 +1371,7 @@
       "required": false,
       "types": [
         {
-          "type": "aint",
-          "named": true
-        },
-        {
-          "type": "identifier",
-          "named": true
-        },
-        {
-          "type": "keyword",
-          "named": true
-        },
-        {
-          "type": "string_literal",
-          "named": true
-        },
-        {
-          "type": "utype",
+          "type": "annotation",
           "named": true
         }
       ]
